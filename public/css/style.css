@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#main{
+    position: absolute;
+    width: 15%;
+}
+#main ul{
+    list-style-type: none;
+}
+#main ul li{
+    width: 100%;
+}
+#main ul li button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    padding: 5px 10px;
+}
+#main ul li button:hover{
+    background-color: rgb(80, 78, 78);
+}
+#property{
+    /* float: right; */
+    position: absolute;
+    margin-left: 4px;
+    left: 75%;
+    top: 0px;
+    height: 100%;
+    width: 25%;
+    font-size: 18px;
+    /* padding: 10px 0; */
+    background-color:rgb(224, 224, 224);
+    color: rgb(0, 0, 0);
+}
+#property ul li{
+    list-style-type: none;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+#property ul li input{
+    border: solid 1px ;
+    padding: 5px;
+    background-color: transparent;
+    color: black;
+    float: right;
+    margin-right: 10px;
+}
+.prop{
+    width: auto;
+    float: right;
+    margin-right: 5px;
+}
+#property label{
+    margin-left: 1px;
+}
+
+#frm{
+    width: 60%;
+    height: 98%;
+    border: solid black 2px;
+    position: absolute;
+    top: 1%;
+    left: 15%;
+}

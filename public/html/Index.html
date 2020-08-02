@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <ul>
+            <!-- <li><button onclick="addElement('div');">div</button></li>
+        <li><button onclick="addElement('input');">input</button></li> -->
+        </ul>
+    </div>
+    <iframe id="frm" src="./wp.html"></iframe>
+    <!-- <div id="workplace"></div> -->
+    <form id="property">
+        <ul>
+            <li>
+                <label for="isIn">inner Element:</label>
+                <input type="checkbox" name="isIn" id="isIn">
+            </li>
+            <li>
+                <input type="text" name="searchById" id="searchById">
+                <input type="button" name="searchById" id="searchById" onclick="search()" value="Search">
+            </li>
+            <li>
+                <input type="text" name="deleteById" id="deleteById">
+                <input type="button" name="delete" id="delete" onclick="delt()" value="Delete">
+            </li>
+            <li>
+                <label for="text">Text :</label>
+                <input type="text" name="text" id="text" class="prop" onchange="setAttr('text');">
+            </li>
+            <li>
+                <label for="id">id :</label>
+                <input type="text" name="id" id="id" class="prop" onblur="setAttr('id');">
+            </li>
+        </ul>
+    </form>
+</body>
+<script src="../JavaScript/main.js"></script>
+<script src="../JavaScript/Index.js"></script>
+<!-- <script src="wp.js"></script> -->
+
+</html>
