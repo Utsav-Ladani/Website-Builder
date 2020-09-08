@@ -1,0 +1,14 @@
+
+.properties li {
+    padding: 5px 20px;
+    background-color: rgb(226, 226, 226);
+
+    list-style-type: none;
+    border-bottom: solid 1px rgb(194, 194, 194);
+}
+.properties label {
+    color: black;
+}
+.properties input {
+    padding: 1px 5px;
+}

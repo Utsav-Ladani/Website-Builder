@@ -1,12 +1,12 @@
 
 function moveDiv() {
   let b = true;
-  selectData.forEach((el) => {
+  selectData1.forEach((el) => {
     b = b | el.onmousedown;
   });
 
   if (b) {
-    selectData.forEach((el) => {
+    selectData1.forEach((el) => {
       el.onmousedown = move;
       el.style.position = "absolute";
       el.onmousedown = move;
@@ -39,7 +39,7 @@ function moveDiv() {
     x1 = e.clientX;
     y1 = e.clientY;
 
-    selectData.forEach((el) => {
+    selectData1.forEach((el) => {
       el.style.top = el.offsetTop - y + "px";
       el.style.left = el.offsetLeft - x + "px";
     });
@@ -51,7 +51,7 @@ function moveDiv() {
 }
 
 function removeHandle() {
-  selectData.forEach((ele) => {
+  selectData1.forEach((ele) => {
     ele.onmousedown = null;
   });
 }

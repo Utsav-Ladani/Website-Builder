@@ -6,4 +6,4 @@ let DataDownload = new Set(); // data for download content
 let ID = 0; //id for identify div
 
 
-let selectData = new Set();
+window.selectData = new Map();

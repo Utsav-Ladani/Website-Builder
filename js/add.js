@@ -1,7 +1,8 @@
 function generateElement(eleName) {
     let addEle = document.createElement(eleName);
     addEle.id = ID++;
-    addEle.textContent = "Hello this is a div#" + addEle.id;    
+    addEle.classList.add(`class-${ID}`)
+    addEle.textContent = "Hello this is a div#" + addEle.id;
     return addEle;
 }
 
