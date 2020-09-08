@@ -63,16 +63,35 @@ function addElement(Element) {
     else {
         var frm = document.getElementById("frm").contentWindow.document.getElementById("workplace");
     }
-    let parenT = frm.appendChild(document.createElement(Element));
+
+    let mainEle = document.createElement(Element);
+    mainEle.style.width = "100%";
+    mainEle.style.height = "100%";
+
+    let mask = document.createElement("div");
+    mask.style.width = "100%";
+    mask.style.height = "100%";
+    mask.style.position = "absolute";
+    mask.style.backgroundColor = "transparent";
+
+    let main = document.createElement("div");
+    main.appendChild(mask);     // masking for element
+    main.appendChild(mainEle);      
+    let parenT = frm.appendChild(main);
+    
+    console.log(main,mainEle);
+
     parenT.id = Element + elementCount;
     parenT.style.width = 150 + "px";
     parenT.style.height = 50 + "px";
+    parenT.style.transform = "translate(-50%,-50%)"
+    // parenT.style.background = `url('http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg')`;
     // parenT.style.padding = 15 + "px";
     if (Element == "input") {
-        parenT.value = Element + elementCount;
+        mainEle.value = Element + elementCount;
     }
     else {
-        parenT.innerText = Element + elementCount;
+        mainEle.innerText = Element + elementCount;
     }
     parenT.style.backgroundColor = "rgb(201, 201, 201)";
     parenT.style.textAlign = "center";

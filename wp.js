@@ -10,7 +10,7 @@ function select(event,thisId){
     event.stopPropagation();
     localStorage.setItem("selectId" , thisId);
     parent.document.getElementById("id").value = document.getElementById(thisId).id;
-    parent.document.getElementById("text").value = document.getElementById(thisId).firstChild.nodeValue;
+    // parent.document.getElementById("text").value = document.getElementById(thisId).firstChild.nodeValue;
     for(let i = 0 ; i<panelCSSPropertyArrayDUP.length ; i++)
     {
         setSelect.call(this , panelCSSPropertyArrayDUP[i],thisId);
@@ -29,12 +29,11 @@ function moveDiv(test) {
         e = e || window.event;
         e.preventDefault();
         e.stopPropagation();
-        console.log("move");
         x1 = e.clientX;
         y1 = e.clientY;
 
-        test.onmousemove = startMove;
-        test.onmouseup = stopMove;
+        window.onmousemove = startMove;
+        window.onmouseup = stopMove;
     }
     function startMove(e) {
         e = e || window.event;
@@ -45,13 +44,15 @@ function moveDiv(test) {
         y = y1 - e.clientY;
         x1 = e.clientX;
         y1 = e.clientY;
-        console.log(e.clientX);
         test.style.top = (test.offsetTop -  y) + "px";
         test.style.left = (test.offsetLeft - x) + "px";
+        // test.style.top = 100*(test.offsetTop -  y)/parseInt(getComputedStyle(test.parentNode).height.replace("px","").replace("vh","")) + "%";
+        // test.style.left = 100*(test.offsetLeft - x)/parseInt(getComputedStyle(test.parentNode).width.replace("px","").replace("vh","")) + "%";
+        console.log(test.style.top);
+
     }
     function stopMove() {
-        console.log("close");
-        test.onmousemove = null;
-        test.onmouseup = null;
+        window.onmousemove = null;
+        window.onmouseup = null;
     }
 }
